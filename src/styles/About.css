@@ -1,0 +1,270 @@
+/* ABOUT SECTION — designed to match the existing dark portfolio */
+
+.about-layout {
+  display: grid;
+  grid-template-columns: minmax(260px, 0.78fr) minmax(0, 1.22fr);
+  align-items: center;
+  gap: clamp(48px, 7vw, 92px);
+}
+
+.about-profile {
+  width: 100%;
+  max-width: 390px;
+  min-width: 0;
+}
+
+.about-photo-frame {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 4.7;
+  overflow: visible;
+  border: 1px solid #303943;
+  background:
+    radial-gradient(circle at 50% 35%, #23384b 0%, #121a23 48%, #0d1116 100%);
+}
+
+.about-photo {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 35%;
+  filter: saturate(0.82) contrast(1.03);
+}
+
+.about-thought {
+  position: absolute;
+  z-index: 2;
+  top: 11%;
+  right: -48px;
+  width: min(230px, 74%);
+  padding: 17px 19px 18px;
+  border: 1px solid rgba(112, 185, 255, 0.42);
+  border-radius: 24px 24px 24px 8px;
+  background: rgba(16, 27, 39, 0.94);
+  box-shadow: 0 14px 38px rgba(0, 0, 0, 0.32);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  animation: aboutThoughtFloat 5s ease-in-out infinite;
+}
+
+.about-thought p {
+  margin: 0;
+  color: #e2ebf4;
+  font-size: 11px;
+  line-height: 1.65;
+}
+
+.thought-mark {
+  display: inline-block;
+  margin-bottom: 7px;
+  color: var(--blue);
+  font-size: 17px;
+}
+
+.thought-tail {
+  position: absolute;
+  display: block;
+  border-radius: 50%;
+  background: #70b9ff;
+  opacity: 0.8;
+}
+
+.thought-tail-one {
+  width: 7px;
+  height: 7px;
+  left: -12px;
+  bottom: -17px;
+}
+
+.thought-tail-two {
+  width: 4px;
+  height: 4px;
+  left: -21px;
+  bottom: -26px;
+  opacity: 0.5;
+}
+
+.about-photo-caption {
+  position: absolute;
+  right: 13px;
+  bottom: 13px;
+  left: 13px;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding: 11px 13px;
+  border: 1px solid rgba(116, 132, 149, 0.35);
+  background: rgba(9, 13, 18, 0.86);
+  color: #d1dbe5;
+  font: 9px 'DM Mono', monospace;
+  letter-spacing: 0.09em;
+}
+
+.about-identity {
+  padding-top: 17px;
+}
+
+.about-identity h3 {
+  margin: 0 0 4px;
+  color: var(--white);
+  font: 600 22px 'Space Grotesk', sans-serif;
+  letter-spacing: -0.035em;
+}
+
+.about-identity p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.about-content h2 {
+  margin-top: 18px;
+}
+
+.about-lead {
+  max-width: 650px;
+  margin: 27px 0 17px;
+  color: #e1e6eb;
+  font-size: 17px;
+  font-weight: 500;
+  line-height: 1.7;
+}
+
+.about-description {
+  max-width: 680px;
+  margin: 0;
+  color: #9ca6b2;
+  font-size: 13px;
+  line-height: 1.85;
+}
+
+.about-interests {
+  margin-top: 27px;
+  padding-top: 19px;
+  border-top: 1px solid var(--line);
+}
+
+.about-interests > .section-kicker {
+  margin-bottom: 13px;
+}
+
+.about-interest-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.about-interest-list span {
+  padding: 8px 10px;
+  border: 1px solid #303944;
+  border-radius: 2px;
+  color: #b8c3ce;
+  font: 9px 'DM Mono', monospace;
+  letter-spacing: 0.025em;
+}
+
+.about-stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-top: 25px;
+}
+
+.about-stats div {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.about-stats strong {
+  color: #e9edf2;
+  font: 500 12px 'Space Grotesk', sans-serif;
+}
+
+.about-stats span {
+  color: #7f8995;
+  font-size: 10px;
+}
+
+@keyframes aboutThoughtFloat {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+/* TABLET */
+
+@media (max-width: 800px) {
+  .about-layout {
+    grid-template-columns: minmax(220px, 0.8fr) minmax(0, 1.2fr);
+    gap: 42px;
+  }
+
+  .about-thought {
+    right: -28px;
+    width: 205px;
+  }
+
+  .about-stats {
+    gap: 20px;
+  }
+}
+
+/* MOBILE */
+
+@media (max-width: 640px) {
+  .about-layout {
+    grid-template-columns: 1fr;
+    gap: 38px;
+  }
+
+  .about-profile {
+    width: min(82%, 350px);
+    max-width: none;
+    margin: 0 auto;
+  }
+
+  .about-photo-frame {
+    aspect-ratio: 4 / 4.5;
+  }
+
+  .about-thought {
+    top: 9%;
+    right: -24px;
+    width: 190px;
+    padding: 14px 15px;
+  }
+
+  .about-thought p {
+    font-size: 10px;
+  }
+
+  .about-content h2 {
+    font-size: clamp(38px, 10vw, 48px);
+  }
+
+  .about-lead {
+    margin-top: 22px;
+    font-size: 16px;
+  }
+
+  .about-description {
+    font-size: 12px;
+  }
+
+  .about-stats {
+    gap: 22px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .about-thought {
+    animation: none;
+  }
+}
