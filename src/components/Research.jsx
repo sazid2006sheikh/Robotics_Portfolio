@@ -8,7 +8,7 @@ import {
   Network,
   ScanSearch,
 } from 'lucide-react'
-import '../styles/research.css'
+import '../styles/Research.css'
 
 const achievements = [
   {
