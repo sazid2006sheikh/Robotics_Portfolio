@@ -12,7 +12,7 @@ import {
   ArrowDown,
 } from 'lucide-react'
 import { skillGroups } from '../data/skills.js'
-import '../styles/Skills.css'
+import '../styles/skills.css'
 
 gsap.registerPlugin(ScrollTrigger)
 
