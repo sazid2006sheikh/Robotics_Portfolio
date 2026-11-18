@@ -10,11 +10,11 @@ export default function Hero() {
           <p className="hero-intro">I explore robotics, autonomous systems and intelligent machines — turning engineering concepts and research into practical, working systems.</p>
           <div className="hero-actions">
             <a className="button button-primary" href="#projects">Explore Projects <ArrowUpRight size={17} /></a>
-            <a className="button button-ghost" href="/resume.pdf" target="_blank" rel="noreferrer">View Resume <ArrowUpRight size={17} /></a>
+            <a className="button button-ghost" href="./resume.pdf" target="_blank" rel="noreferrer">View Resume <ArrowUpRight size={17} /></a>
           </div>
           <div className="hero-socials">
-            <a href="https://github.com/" target="_blank" rel="noreferrer" aria-label="GitHub"><Github size={18} /></a>
-            <a href="https://linkedin.com/" target="_blank" rel="noreferrer" aria-label="LinkedIn"><Linkedin size={18} /></a>
+            <a href="https://github.com/sazid2006sheikh/" target="_blank" rel="noreferrer" aria-label="GitHub"><Github size={18} /></a>
+            <a href="https://www.linkedin.com/in/sazid-sheikh/" target="_blank" rel="noreferrer" aria-label="LinkedIn"><Linkedin size={18} /></a>
             <span>Based in India · Open to opportunities</span>
           </div>
         </div>
